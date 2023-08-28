@@ -219,7 +219,6 @@ class App(MDApp):
         self.screen.ids.setting_audioformat.text = s.audioformat
         self.screen.ids.setting_libary.text = s.libary
 
-        #fetch = self.Spotify.playlist_tracks("https://open.spotify.com/playlist/5XdVwetkgEK8wOoUTsSnC5?si=032235d29a4c4e36")
         return self.screen
 
 

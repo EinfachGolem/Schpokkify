@@ -1,0 +1,10 @@
+{
+    "bitrate": "320k",
+    "libary": "youtube-music",
+    "audioformat": "wav",
+    "output": "./processed",
+    "spotifyapi": {
+        "clientid": "SPOTIFYCLIENTID",
+        "clientsecret": "SPOTIFYCLIENTSECRET"
+    }
+}
