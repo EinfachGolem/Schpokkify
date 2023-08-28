@@ -1,0 +1,65 @@
+MDScreen:
+
+    MDTextField:
+        id: txt_directory
+        hint_text: "Folder Path"
+        pos_hint: {"center_x": .5, "center_y": .6}
+        size_hint_x: .47
+        disabled: False
+    
+    MDTextField:
+        id: txt_downloadlink
+        hint_text: "Spotifylink:"
+        pos_hint: {"center_x": .5, "center_y": .5}
+        size_hint_x: .47
+
+    MDDropDownItem:
+        id: setting_bitrate
+        pos_hint: {'center_x': .1, 'center_y': .9}
+        text: ''
+        on_release: app.openSettingSetBitrate()
+    
+    MDDropDownItem:
+        id: setting_audioformat
+        pos_hint: {'center_x': .1, 'center_y': .85}
+        text: ''
+        on_release: app.openSettingSetAudioFormat()
+    
+    MDDropDownItem:
+        id: setting_libary
+        pos_hint: {'center_x': .1, 'center_y': .8}
+        text: ''
+        on_release: app.openSettingSetLibary()
+    
+    MDIconButton:
+        icon: "folder-edit-outline"
+        pos_hint: {'center_x': .24, 'center_y': .6}
+        on_press: app.openDirectorydialog()
+        color_active: .12, .84, .38
+    
+    MDIconButton:
+        icon: "music-note-plus"
+        pos_hint: {'center_x': .24, 'center_y': .5}
+        on_press: app.addLinkToList()
+        color_active: .12, .84, .38
+
+    MDRoundFlatIconButton:
+        text: "Download"
+        icon: "cloud-download-outline"
+        color_active: .12, .84, .38
+        pos_hint: {'center_x': .85, 'center_y': .525}
+        on_press: app.startDownload()
+    
+    MDBoxLayout:
+        size_hint: 1.0, .4
+        canvas.before:
+            Color:
+                rgb: .12, .84, .38
+            Line:
+                width: 5
+                rectangle: self.x, self.y, self.width, self.height
+
+        MDScrollView:
+            MDList:
+                id: spotdllinks
+                padding: 0
